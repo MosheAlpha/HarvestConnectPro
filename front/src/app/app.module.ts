@@ -33,7 +33,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     SignUpComponent,
     NavBarComponent,
     EventComponent,
-    BestdealEventComponent
+    BestdealEventComponent,
     SnackbarComponent
   ],
   imports: [
