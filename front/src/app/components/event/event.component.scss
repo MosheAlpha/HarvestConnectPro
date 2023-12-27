@@ -1,0 +1,8 @@
+.events-container {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    .event-card {
+        width: 29%;;
+    }
+}
