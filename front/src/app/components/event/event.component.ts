@@ -13,6 +13,19 @@ export class EventComponent implements OnInit {
     
   }
 
+  getColor(difficulty: string): string {
+    switch (difficulty) {
+      case 'קל':
+        return '#cffbd4';
+      case 'ממוצע':
+        return '#fbf6cf';
+      case 'קשה':
+        return '#fbd9cf';
+      default:
+        return ''; // You can provide a default color or handle it as needed
+    }
+  }
+
 
 
 
