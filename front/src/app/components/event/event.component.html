@@ -2,7 +2,7 @@
     <div class="event-card" *ngFor="let event of events">
         <div class="item">
             <a routerLink="/volunteer-details"><img src="assets/images/property-01.jpg" alt="" /></a>
-            <span class="category">{{event.difficulty}}</span>
+            <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty)}">{{event.difficulty}}</span>
             <h6>{{event.type}}</h6>
             <h4>
                 <a routerLink="/volunteer-details">{{event.title}}</a>
