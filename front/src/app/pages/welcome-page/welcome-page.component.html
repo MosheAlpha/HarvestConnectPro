@@ -212,7 +212,7 @@
               <div class="counter">
                 <h2
                   class="timer count-title count-number"
-                  [attr.data-to]="getSoldiersAmount()"
+                  [attr.data-to]="this.soldierAmount"
                   data-speed="1000"
                 ></h2>
                 <p class="count-text">כמות<br />חיילים שמתנדבים</p>
@@ -222,7 +222,7 @@
               <div class="counter">
                 <h2
                   class="timer count-title count-number"
-                  [attr.data-to]="getPeopleAmount()"
+                  [attr.data-to]="this.peopleAmount"
                   data-speed="1000"
                 ></h2>
                 <p class="count-text">כמות<br />האנשים</p>
@@ -232,7 +232,7 @@
               <div class="counter">
                 <h2
                   class="timer count-title count-number"
-                  [attr.data-to]="getVolAmount()"
+                  [attr.data-to]="this.volAmount"
                   data-speed="1000"
                 ></h2>
                 <p class="count-text">מקומות התנדבות<br />רק לשנת 2023</p>
