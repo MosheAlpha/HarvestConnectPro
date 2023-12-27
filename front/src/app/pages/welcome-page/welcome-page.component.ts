@@ -24,9 +24,9 @@ export class WelcomePageComponent implements OnInit {
     });
   }
 
-  soldierAmount: number = 100;
-  peopleAmount: number = 100;
-  volAmount: number = 100;
+  soldierAmount: number = 15000;
+  peopleAmount: number = 27000;
+  volAmount: number = 75;
   // this.dataService
   //   .getVolAmount()
   //   .subscribe((amount: number) => (this.volAmount = amount));
