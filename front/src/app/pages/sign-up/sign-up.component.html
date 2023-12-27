@@ -3,10 +3,11 @@
     <div class="form-container sign-in-container">
       <form action="#">
         <h1>Sign Up</h1>
-        <input type="text" placeholder="Full Name" #name />
-        <input type="email" placeholder="Email or Username" #username />
-        <input type="password" placeholder="Password" #password />
-        <button (click)="signup(name.value, username.value, password.value)">
+        <input dir="rtl" type="text" placeholder="שם מלא" #name />
+        <input dir="rtl" type="email" placeholder="מייל או שם משתמש" #username />
+        <input dir="rtl" type="password" placeholder="סיסמה" #password />
+        <input dir="rtl" type="password" placeholder="סיסמה" #password1 />
+        <button (click)="signup(name.value, username.value, password.value, password1.value)">
           Sign Up
         </button>
       </form>
