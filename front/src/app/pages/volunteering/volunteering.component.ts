@@ -10,7 +10,7 @@ export class VolunteeringComponent {
   events = [
     {
       "type": "a",
-      "difficulty": "easy",
+      "difficulty": "קל",
       "signedUpPeople": [],
       "title": "new title",
       "location": "Tel Aviv",
@@ -21,7 +21,7 @@ export class VolunteeringComponent {
   },
   {
       "type": "b",
-      "difficulty": "hard",
+      "difficulty": "קשה",
       "signedUpPeople": [],
       "title": "Help needed to take oranges",
       "location": "Jerusalem",
@@ -32,7 +32,7 @@ export class VolunteeringComponent {
   },
   {
       "type": "b",
-      "difficulty": "hard",
+      "difficulty": "ממוצע",
       "signedUpPeople": [],
       "title": "Help needed to take oranges",
       "location": "Jerusalem",
@@ -43,7 +43,7 @@ export class VolunteeringComponent {
   },
   {
       "type": "b",
-      "difficulty": "hard",
+      "difficulty": "קשה",
       "signedUpPeople": [],
       "title": "Help needed to take oranges",
       "location": "Jerusalem",
@@ -54,7 +54,7 @@ export class VolunteeringComponent {
   },
   {
       "type": "b",
-      "difficulty": "hard",
+      "difficulty": "קשה",
       "signedUpPeople": [],
       "title": "Help needed to take oranges",
       "location": "Jerusalem",
@@ -65,7 +65,7 @@ export class VolunteeringComponent {
   },
   {
       "type": "b",
-      "difficulty": "hard",
+      "difficulty": "קל",
       "signedUpPeople": [],
       "title": "Help needed to take oranges",
       "location": "Jerusalem",
