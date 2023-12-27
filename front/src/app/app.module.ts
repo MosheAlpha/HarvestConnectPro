@@ -15,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { EventComponent } from './components/event/event.component';
+import { BestdealEventComponent } from './components/bestdeal-event/bestdeal-event.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EventComponent } from './components/event/event.component';
     LoginComponent,
     SignUpComponent,
     NavBarComponent,
-    EventComponent
+    EventComponent,
+    BestdealEventComponent
   ],
   imports: [
     BrowserModule,
