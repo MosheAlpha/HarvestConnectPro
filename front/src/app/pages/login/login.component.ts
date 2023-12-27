@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-//   const signUpButton = document.getElementById('signUp');
-// const signInButton = document.getElementById('signIn');
-// const container = document.getElementById('container');
+  constructor(private authService: AuthService, private router: Router) {}
 
-// signUpButton.addEventListener('click', () => {
-// 	container.classList.add("right-panel-active");
-// });
-
-// signInButton.addEventListener('click', () => {
-// 	container.classList.remove("right-panel-active");
-// });
+  login(username: any, password: any): void {
+    this.authService.login(username, password).subscribe((success) => {
+      if (success) {
+        // Navigate to the home page
+        this.router.navigate(['/home']);
+      } else {
+        // Display an error message
+      }
+    });
+  }
 }
