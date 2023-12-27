@@ -17,13 +17,13 @@ export class SignUpComponent {
     this.snackbarService.showSnackbar(message);
   }
 
-  chackPasswords(password: string, password1: string): boolean {
+  checkPasswords(password: string, password1: string): boolean {
     return password == password1 
   }
 
   signup(name: string, email: string, password: string , password1: string): void {
     let message: string="";
-    if(this.chackPasswords(password, password1)){
+    if(this.checkPasswords(password, password1)){
       this.authService.signup(name, email, password).subscribe((success) => {
         if (success) {
           // Navigate to the home page

@@ -1,22 +1,33 @@
-<nav class="main-nav">
-    <!-- ***** Logo Start ***** -->
-    <a href="index.html" class="logo">
-        <h1>HarvestConnect</h1>
-    </a>
-    <!-- ***** Logo End ***** -->
-    <!-- ***** Menu Start ***** -->
-    <ul dir="rtl" class="nav">
-        <li><a (click)="scrollToContact('header')">בית</a></li>
-        <li><a (click)="scrollToContact('closes-event')">ההתנדבות הקרובה</a></li>
-        <li><a (click)="scrollToContact('events')">התנדבויות</a></li>
-        <li><a (click)="scrollToContact('contact')" >צור קשר
-        </a></li>
-        <li>
-            <!-- <a dir="rtl" href="#"><i class="fa fa-calendar"></i> Schedule a visit</a> -->
-        </li>
-    </ul>
-    <a class="menu-trigger">
-        <span>Menu</span>
-    </a>
-    <!-- ***** Menu End ***** -->
-</nav>
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a routerLink="/home" class="logo">
+            <h1>Harvest<span>Connect</span></h1>
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul dir="rtl" class="nav">
+            <li><a routerLink="/home">בית</a></li>
+            <li><a routerLink="/volunteering">התנדבויות</a></li>
+
+            <li>
+              <a routerLink="/volunteer-details">ההתנדבות הקרובה</a>
+            </li>
+            <li><a routerLink="/crm" *ngIf="this.isAdmin()">ניהול</a></li>
+            <li><a routerLink="/contact">צור קשר </a></li>
+            <li>
+              <!-- <a dir="rtl" href="#"><i class="fa fa-calendar"></i> Schedule a visit</a> -->
+            </li>
+          </ul>
+          <a class="menu-trigger">
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
