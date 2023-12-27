@@ -1,0 +1,15 @@
+<div class="box">
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Full Name" #name />
+        <input type="email" placeholder="Email or Username" #username />
+        <input type="password" placeholder="Password" #password />
+        <button (click)="signup(name.value, username.value, password.value)">
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
