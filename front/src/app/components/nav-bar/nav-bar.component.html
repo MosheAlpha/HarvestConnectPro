@@ -5,16 +5,17 @@
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a routerLink="/home" class="logo">
-            <h1>HarvestConnect</h1>
+            <h1>Harvest<span>Connect</span></h1>
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul dir="rtl" class="nav">
             <li><a routerLink="/home">בית</a></li>
+            <li><a routerLink="/volunteering">התנדבויות</a></li>
+
             <li>
-              <a routerLink="/volunteering">ההתנדבות הקרובה</a>
+              <a routerLink="/volunteer-details">ההתנדבות הקרובה</a>
             </li>
-            <li><a routerLink="/volunteer-details">התנדבויות</a></li>
             <li><a routerLink="/crm" *ngIf="this.isAdmin()">ניהול</a></li>
             <li><a routerLink="/contact">צור קשר </a></li>
             <li>
