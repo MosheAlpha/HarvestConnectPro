@@ -1,16 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bestdeal-event',
   templateUrl: './bestdeal-event.component.html',
   styleUrls: ['./bestdeal-event.component.scss']
 })
-export class BestdealEventComponent implements OnInit {
+export class BestdealEventComponent implements OnChanges {
 
-  @Input() events: any;
+  @Input() events: any = [];
+  easy: any = {}
+  medium: any = {}
+  hard: any = {}
 
-  ngOnInit(): void {
-    
+  ngOnChanges(changes: any) {
+    if (changes && changes.events && changes.events.currentValue.length > 0 && changes.events.currentValue !== changes.events.previousValue) {
+      this.easy = this.events[0];
+      this.medium = this.events[1];
+      this.hard = this.events[2];
+    }
   }
 
 }

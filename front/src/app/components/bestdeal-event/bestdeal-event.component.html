@@ -15,43 +15,43 @@
                   <li class="nav-item" role="presentation">
                     <button
                       class="nav-link active"
-                      id="appartment-tab"
+                      id="easy-tab"
                       data-bs-toggle="tab"
-                      data-bs-target="#appartment"
+                      data-bs-target="#easy"
                       type="button"
                       role="tab"
-                      aria-controls="appartment"
+                      aria-controls="easy"
                       aria-selected="true"
                     >
-                      Appartment
+                      Easy
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button
                       class="nav-link"
-                      id="villa-tab"
+                      id="medium-tab"
                       data-bs-toggle="tab"
-                      data-bs-target="#villa"
+                      data-bs-target="#medium"
                       type="button"
                       role="tab"
-                      aria-controls="villa"
+                      aria-controls="medium"
                       aria-selected="false"
                     >
-                      Villa House
+                      Medium
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button
                       class="nav-link"
-                      id="penthouse-tab"
+                      id="hard-tab"
                       data-bs-toggle="tab"
-                      data-bs-target="#penthouse"
+                      data-bs-target="#hard"
                       type="button"
                       role="tab"
-                      aria-controls="penthouse"
+                      aria-controls="hard"
                       aria-selected="false"
                     >
-                      Penthouse
+                      Hard
                     </button>
                   </li>
                 </ul>
@@ -59,19 +59,19 @@
               <div class="tab-content" id="myTabContent">
                 <div
                   class="tab-pane fade show active"
-                  id="appartment"
+                  id="easy"
                   role="tabpanel"
-                  aria-labelledby="appartment-tab"
+                  aria-labelledby="easy-tab"
                 >
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="info-table">
                         <ul>
-                          <li>Total Flat Space <span>185 m2</span></li>
-                          <li>Floor number <span>26th</span></li>
-                          <li>Number of rooms <span>4</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
+                          <li>Location <span>{{this.easy.location}}</span></li>
+                          <li>Date <span>{{this.easy.date}}</span></li>
+                          <li>People needed <span>{{this.easy.amountPeopleRequired}}</span></li>
+                          <li>Spots left <span>{{this.easy.amountPeopleLeft}}</span></li>
+                          <li>Type <span>{{this.easy.type}}</span></li>
                         </ul>
                       </div>
                     </div>
@@ -79,7 +79,7 @@
                       <img src="assets/images/deal-01.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
-                      <h4>Extra Info About Property</h4>
+                      <h4>{{this.easy.title}}</h4>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         do eiusmod tempor pack incididunt ut labore et dolore
@@ -91,7 +91,7 @@
                       </p>
                       <div class="icon-button">
                         <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i> Schedule a visit</a
+                          ><i class="fa fa-calendar"></i>לפרטים</a
                         >
                       </div>
                     </div>
@@ -99,19 +99,19 @@
                 </div>
                 <div
                   class="tab-pane fade"
-                  id="villa"
+                  id="medium"
                   role="tabpanel"
-                  aria-labelledby="villa-tab"
+                  aria-labelledby="medium-tab"
                 >
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="info-table">
                         <ul>
-                          <li>Total Flat Space <span>250 m2</span></li>
-                          <li>Floor number <span>26th</span></li>
-                          <li>Number of rooms <span>5</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
+                          <li>Location <span>{{this.medium.location}}</span></li>
+                          <li>Date <span>{{this.medium.date}}</span></li>
+                          <li>People needed <span>{{this.medium.amountPeopleRequired}}</span></li>
+                          <li>Spots left <span>{{this.medium.amountPeopleLeft}}</span></li>
+                          <li>Type <span>{{this.medium.type}}</span></li>
                         </ul>
                       </div>
                     </div>
@@ -119,7 +119,7 @@
                       <img src="assets/images/deal-02.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
-                      <h4>Detail Info About Villa</h4>
+                      <h4>{{this.medium.title}}</h4>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         do eiusmod tempor pack incididunt ut labore et dolore
@@ -131,27 +131,28 @@
                       </p>
                       <div class="icon-button">
                         <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i> Schedule a visit</a
+                          ><i class="fa fa-calendar"></i> לפרטים</a
                         >
                       </div>
                     </div>
                   </div>
                 </div>
+                
                 <div
                   class="tab-pane fade"
-                  id="penthouse"
+                  id="hard"
                   role="tabpanel"
-                  aria-labelledby="penthouse-tab"
+                  aria-labelledby="hard-tab"
                 >
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="info-table">
                         <ul>
-                          <li>Total Flat Space <span>320 m2</span></li>
-                          <li>Floor number <span>34th</span></li>
-                          <li>Number of rooms <span>6</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
+                          <li>Location <span>{{this.hard.location}}</span></li>
+                          <li>Date <span>{{this.hard.date}}</span></li>
+                          <li>People needed <span>{{this.hard.amountPeopleRequired}}</span></li>
+                          <li>Spots left <span>{{this.hard.amountPeopleLeft}}</span></li>
+                          <li>Type <span>{{this.hard.type}}</span></li>
                         </ul>
                       </div>
                     </div>
@@ -159,7 +160,7 @@
                       <img src="assets/images/deal-03.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
-                      <h4>Extra Info About Penthouse</h4>
+                      <h4>{{this.hard.title}}</h4>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         do eiusmod tempor pack incididunt ut labore et dolore
@@ -171,7 +172,7 @@
                       </p>
                       <div class="icon-button">
                         <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i> Schedule a visit</a
+                          ><i class="fa fa-calendar"></i> לפרטים</a
                         >
                       </div>
                     </div>
