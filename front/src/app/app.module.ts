@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppComponent } from './app.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { VolunteeringComponent } from './pages/volunteering/volunteering.component';
@@ -14,6 +15,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SnackbarComponent } from './components/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +29,22 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     ContactComponent,
     LoginComponent,
     SignUpComponent,
-    NavBarComponent
+    NavBarComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    SignUpComponent,
+    LoginComponent
+  ]
 })
 export class AppModule { }
