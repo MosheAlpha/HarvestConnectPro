@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,7 +8,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class NavBarComponent {
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef, private authService: AuthService) { }
 
   ngOnInit() { }
 
@@ -16,5 +17,9 @@ export class NavBarComponent {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+  
+  isAdmin(): boolean{
+    return this.authService.isAdmin();
   }
 }
