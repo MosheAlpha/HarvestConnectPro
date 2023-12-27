@@ -7,4 +7,73 @@ import { Component } from '@angular/core';
 })
 export class VolunteeringComponent {
 
+  events = [
+    {
+      "type": "a",
+      "difficulty": "easy",
+      "signedUpPeople": [],
+      "title": "new title",
+      "location": "Tel Aviv",
+      "date": "27/01/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c345fcd9eb7477c66afb9"
+  },
+  {
+      "type": "b",
+      "difficulty": "hard",
+      "signedUpPeople": [],
+      "title": "Help needed to take oranges",
+      "location": "Jerusalem",
+      "date": "04/03/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c3d23ed509315587e33e2"
+  },
+  {
+      "type": "b",
+      "difficulty": "hard",
+      "signedUpPeople": [],
+      "title": "Help needed to take oranges",
+      "location": "Jerusalem",
+      "date": "04/03/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c3d23ed509315587e33e2"
+  },
+  {
+      "type": "b",
+      "difficulty": "hard",
+      "signedUpPeople": [],
+      "title": "Help needed to take oranges",
+      "location": "Jerusalem",
+      "date": "04/03/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c3d23ed509315587e33e2"
+  },
+  {
+      "type": "b",
+      "difficulty": "hard",
+      "signedUpPeople": [],
+      "title": "Help needed to take oranges",
+      "location": "Jerusalem",
+      "date": "04/03/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c3d23ed509315587e33e2"
+  },
+  {
+      "type": "b",
+      "difficulty": "hard",
+      "signedUpPeople": [],
+      "title": "Help needed to take oranges",
+      "location": "Jerusalem",
+      "date": "04/03/2024",
+      "amountPeopleRequired": 10,
+      "amountPeopleLeft": 10,
+      "id": "658c3d23ed509315587e33e2"
+  }
+  ]
+
 }
