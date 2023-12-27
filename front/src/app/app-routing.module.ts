@@ -3,14 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { VolunteeringComponent } from './pages/volunteering/volunteering.component';
 import { VolunteerDetailsComponent } from './pages/volunteer-details/volunteer-details.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: WelcomePageComponent },
   { path: 'volunteering', component: VolunteeringComponent },
   { path: 'volunteer-details', component: VolunteerDetailsComponent },
-  // { path: 'services', component: ServicesComponent },
-  // { path: 'blog', component: BlogComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent },
 ];
 
 @NgModule({
