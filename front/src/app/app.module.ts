@@ -8,6 +8,7 @@ import { VolunteeringComponent } from './pages/volunteering/volunteering.compone
 import { VolunteerDetailsComponent } from './pages/volunteer-details/volunteer-details.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
     VolunteeringComponent,
     VolunteerDetailsComponent,
     LoaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
