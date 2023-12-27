@@ -4,6 +4,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { VolunteeringComponent } from './pages/volunteering/volunteering.component';
 import { VolunteerDetailsComponent } from './pages/volunteer-details/volunteer-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'volunteering', component: VolunteeringComponent },
   { path: 'volunteer-details', component: VolunteerDetailsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent },
 ];
 
 @NgModule({
