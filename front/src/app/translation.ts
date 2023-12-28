@@ -6,5 +6,8 @@ export const englishToHebrew: { [key: string]: string } = {
     'paint_trees': 'צביעת עצים',
     'pipes': 'פריסת צינורות',
     'planting': 'שתילה',
-    'pruning': 'גיזום'
+    'pruning': 'גיזום',
+    'easy': 'קל',
+    'hard': 'קשה',
+    "medium": 'ממוצע'
   };

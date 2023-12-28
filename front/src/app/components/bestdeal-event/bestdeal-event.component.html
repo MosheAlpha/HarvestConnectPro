@@ -74,21 +74,21 @@
                           תאריך <span>{{ this.easy.date }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת סה"כ
+                          כמות אנשים
                           <span>{{ this.easy.amountPeopleRequired }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת
+                          חוסר
                           <span>{{ this.easy.amountPeopleLeft }}</span>
                         </li>
                         <li>
-                          סוג התנדבות <span>{{ this.easy.type }}</span>
+                          סוג התנדבות <span>{{ this.easy.type | translate}}</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <img src="assets/photos/{{ this.easy.type }}.jpg" alt="" />
+                    <img src="assets/photos/{{ this.easy.type}}.jpg" alt="" />
                   </div>
                   <div class="col-lg-3">
                     <h4>{{ this.volunteerHarvestLevels.easy.title }}</h4>
@@ -120,15 +120,15 @@
                           תאריך <span>{{ this.medium.date }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת סה"כ
+                          כמות אנשים
                           <span>{{ this.medium.amountPeopleRequired }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת
+                          חוסר
                           <span>{{ this.medium.amountPeopleLeft }}</span>
                         </li>
                         <li>
-                          סוג התנדבות <span>{{ this.medium.type }}</span>
+                          סוג התנדבות <span>{{ this.medium.type | translate}}</span>
                         </li>
                       </ul>
                     </div>
@@ -170,15 +170,15 @@
                           תאריך <span>{{ this.hard.date }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת סה"כ
+                          כמות אנשים
                           <span>{{ this.hard.amountPeopleRequired }}</span>
                         </li>
                         <li>
-                          כמות אנשים שנצרכת
+                          חוסר
                           <span>{{ this.hard.amountPeopleLeft }}</span>
                         </li>
                         <li>
-                          סוג התנדבות <span>{{ this.hard.type }}</span>
+                          סוג התנדבות <span>{{ this.hard.type | translate}}</span>
                         </li>
                       </ul>
                     </div>
