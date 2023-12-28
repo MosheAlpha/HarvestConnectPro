@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EventService } from 'src/app/event.service';
 import { SnackbarService } from 'src/app/services/snackbar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-event',
@@ -14,7 +15,8 @@ export class NewEventComponent {
   constructor(
     private formBuilder: FormBuilder,
     private eventService: EventService,
-    public snackbarService: SnackbarService
+    public snackbarService: SnackbarService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,15 +36,17 @@ export class NewEventComponent {
 
   onSubmit(): void {
     if (this.eventForm.valid) {
-      debugger
       const eventData = this.eventForm.value;
       eventData.amountPeopleLeft = eventData.amountPeopleRequired;
 
       this.eventService.createEvent(eventData).subscribe((response) => {
-        this.snackbarService.showSnackbar(
-          'איורע נוצר בהצלחה!',
-          'snackbar-success '
-        );
+        if (response) {
+          // this.snackbarService.showSnackbar(
+          //   'איורע נוצר בהצלחה!',
+          //   'snackbar-success '
+          // );
+          this.router.navigate(['/home']);
+        }
 
         // You can handle successful creation, such as navigating to another page
       });
