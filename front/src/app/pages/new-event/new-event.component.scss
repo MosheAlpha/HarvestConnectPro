@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -78,14 +78,16 @@ form {
   padding: 0 50px;
   height: 100%;
   text-align: center;
+  width: 80%;
 }
 
-input {
+input, select {
   background-color: #eee;
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  direction: rtl;
 }
 
 .box {
@@ -104,6 +106,11 @@ input {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
 }
 
 .form-container {

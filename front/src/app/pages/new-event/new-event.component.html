@@ -1,28 +1,54 @@
+<app-nav-bar></app-nav-bar>
+
 <div class="box">
   <div class="container" id="container">
-    <div class="form-container sign-in-container">
-      <form>
-        <h1>התחברות</h1>
-        <div class="social-container">
-          <a class="social"><i class="fab fa-facebook-f"></i></a>
-          <a class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a class="social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <span>או תשתמש בחשבון</span>
-        <input type="email" placeholder="Email or Username" #username />
-        <input type="password" placeholder="Password" #password />
-        <a>שכחת סיסמא?</a>
-        <button type="submit">כניסה</button>
+    <form>
+      <h1>אירוע חדש</h1>
+      <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+        <label for="title">:שם ההתנדבות</label>
+        <input type="text" id="title" formControlName="title" />
+
+        <label for="date">:תאריך</label>
+        <input type="date" id="date" formControlName="date" />
+
+        <label for="location">:מיקום</label>
+        <input type="text" id="location" formControlName="location" />
+
+        <label for="type">:סוג ההתנדבות</label>
+        <select id="type" formControlName="type">
+          <option value="" disabled></option>
+          <option value="eggs">איסוף ביצים</option>
+          <option value="digging">חפירה</option>
+          <option value="ferm_animals">האכלת חיות משק</option>
+          <option value="harvest">קטיף</option>
+          <option value="paint_trees">צביעת עצים</option>
+          <option value="pipes">פריסת צינורות</option>
+          <option value="planting">שתילה</option>
+          <option value="pruning">גיזום</option>
+        </select>
+
+        <label for="difficulty">:קושי ההתנדבות</label>
+        <select id="difficulty" formControlName="difficulty">
+          <option value="" disabled></option>
+          <option value="easy">קל</option>
+          <option value="medium">ממוצע</option>
+          <option value="hard">קשה</option>
+        </select>
+
+        <label for="amountPeopleRequired">:כמות אנשים נדרשת</label>
+        <input
+          type="number"
+          id="amountPeopleRequired"
+          formControlName="amountPeopleRequired"
+        />
+
+        <button
+          style="margin-top: 30px"
+          type="submit"
+        >
+          שלח
+        </button>
       </form>
-    </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-right">
-          <h1>!שלום חבר</h1>
-          <p>אם אתה חדש אצלינו, אז פשוט תירשם ונתחיל את המסע שלנו</p>
-          <button class="ghost" id="signUp" routerLink="/sign-up">הרשמה</button>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
