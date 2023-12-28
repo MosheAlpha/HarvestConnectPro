@@ -19,6 +19,7 @@ import { EventComponent } from './components/event/event.component';
 import { BestdealEventComponent } from './components/bestdeal-event/bestdeal-event.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { TranslatePipe } from './translate.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     NavBarComponent,
     EventComponent,
     BestdealEventComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
