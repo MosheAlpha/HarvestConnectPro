@@ -29,20 +29,23 @@ export class SignUpComponent {
     name: string,
     email: string,
     password: string,
-    password1: string
+    password1: string,
+    isAgri: boolean,
   ): void {
     let message: string = '';
+    debugger
+    let role = isAgri ? 'admin' : 'user';
     if (this.checkPasswords(password, password1)) {
-      this.authService.signup(name, email, password).subscribe((success) => {
-        if (success) {
+      this.authService.signup(name, email, password, role).subscribe((success) => {
+        // if (success) {
           // Navigate to the home page
           this.showSnackbarOnClick('הרישום עבר בהצלחה', 'snackbar-success');
           this.router.navigate(['/home']);
-        } else {
+        // } else {
           // Display an error message
-          this.showSnackbarOnClick('היתה בעיה באחד הנתונים', 'snackbar-error');
-          console.error('Signup failed');
-        }
+          // this.showSnackbarOnClick('היתה בעיה באחד הנתונים', 'snackbar-error');
+          // console.error('Signup failed');
+        // }
       });
     } else {
       message = 'הססמאות אינם זהות';

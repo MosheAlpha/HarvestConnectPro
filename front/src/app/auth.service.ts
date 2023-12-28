@@ -46,9 +46,10 @@ export class AuthService {
   signup(
     name: string,
     username: string,
-    password: string
+    password: string,
+    role: string,
   ): Observable<boolean> {
-    const newUser = { name, email: username, password };
+    const newUser = { name, email: username, password, role: role };
 
     return this.http.post<any>(`${this.apiUrl}/register`, newUser).pipe(
       map((response) => {

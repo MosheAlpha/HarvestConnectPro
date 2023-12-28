@@ -12,9 +12,12 @@
         />
         <input dir="rtl" type="password" placeholder="סיסמא" #password />
         <input dir="rtl" type="password" placeholder="סיסמא" #password1 />
+        <div class="checkbox-agri">
+          <input dir="rtl" type="checkbox" #isAgri><label for="isAgri">חקלאי</label>
+        </div>
         <button
           (click)="
-            signup(name.value, username.value, password.value, password1.value)
+            signup(name.value, username.value, password.value, password1.value, isAgri.checked)
           "
         >
           הרשמה

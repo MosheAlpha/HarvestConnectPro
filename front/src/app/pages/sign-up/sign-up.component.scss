@@ -257,3 +257,15 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+
+.checkbox-agri {
+  display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  input {
+    width: 20px;
+    height: 30px;
+  }
+}
