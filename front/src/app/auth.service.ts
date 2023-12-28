@@ -30,6 +30,10 @@ export class AuthService {
             this.refreshTokenKey,
             response.tokens.refresh.token
           );
+          localStorage.setItem(
+            'isAdmin',
+            response.user.role
+          );
           return true;
         } else {
           return false;
@@ -81,7 +85,6 @@ export class AuthService {
   }
 
   isAdmin(): boolean {
-    // return localStorage.getItem('isAdmin') ? true : false;
-    return true;
+    return localStorage.getItem('isAdmin') === 'user' ? false : true;
   }
 }

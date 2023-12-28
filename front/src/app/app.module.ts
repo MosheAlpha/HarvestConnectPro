@@ -20,6 +20,7 @@ import { BestdealEventComponent } from './components/bestdeal-event/bestdeal-eve
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { TranslatePipe } from './translate.pipe';
+import { ManagementComponent } from './pages/management/management.component';
 import { NewEventComponent } from './pages/new-event/new-event.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -39,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BestdealEventComponent,
     SnackbarComponent,
     TranslatePipe,
+    ManagementComponent,
     NewEventComponent
   ],
   imports: [
