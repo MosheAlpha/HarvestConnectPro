@@ -3,7 +3,7 @@
         <div class="item">
             <a routerLink="/volunteer-details"><img class="card-img" src="assets/photos/{{event.type}}.jpg" alt="" /></a>
             <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty)}">{{event.difficulty}}</span>
-            <h6>{{event.type}}</h6>
+            <h6>{{event.type | translate}}</h6>
             <h4 dir="rtl">
                 <a routerLink="/volunteer-details">{{event.title}}</a>
             </h4>
