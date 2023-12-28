@@ -26,10 +26,16 @@
                 >ההתנדבות הקרובה</a
               >
             </li>
-            <li><a routerLink="/crm" *ngIf="this.isAdmin() && this.isLogged">ניהול</a></li>
+            <li>
+              <a routerLink="/crm" *ngIf="this.isAdmin() && this.isLogged"
+                >ניהול</a
+              >
+            </li>
             <li><a routerLink="/contact">צור קשר </a></li>
             <li>
-              <!-- <a dir="rtl" href="#"><i class="fa fa-calendar"></i> Schedule a visit</a> -->
+              <a routerLink="/new-event" class="add-button" *ngIf="this.isAdmin() && this.isLogged"
+                >+</a
+              >
             </li>
           </ul>
           <a class="menu-trigger">

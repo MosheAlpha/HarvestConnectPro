@@ -22,6 +22,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { TranslatePipe } from './translate.pipe';
 import { ManagementComponent } from './pages/management/management.component';
 import { NewEventComponent } from './pages/new-event/new-event.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { NewEventComponent } from './pages/new-event/new-event.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [
