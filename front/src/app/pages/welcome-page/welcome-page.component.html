@@ -244,7 +244,10 @@
   </div>
 </div>
 
-<app-bestdeal-event [events]="this.events"></app-bestdeal-event>
+<app-bestdeal-event
+  [events]="this.events"
+  *ngIf="isLogged"
+></app-bestdeal-event>
 
 <div class="properties section" id="events">
   <div class="container">
@@ -255,7 +258,14 @@
           <h2>אנחנו מספקים מגוון רחב של התנדבויות</h2>
         </div>
       </div>
-      <app-event [events]="events"></app-event>
+      <app-event
+        [events]="events"
+        *ngIf="isLogged; else elseTemplate"
+      ></app-event>
+
+      <ng-template #elseTemplate>
+        <h2 class="no-permission">יש להתחבר כדי לראות את כל ההתנדבויות</h2>
+      </ng-template>
     </div>
   </div>
 </div>

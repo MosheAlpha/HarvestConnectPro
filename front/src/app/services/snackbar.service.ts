@@ -3,19 +3,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SnackbarService {
+  constructor(private snackBar: MatSnackBar) {}
 
-  constructor(private snackBar: MatSnackBar) { }
-
-  showSnackbar(message: string) {
+  showSnackbar(message: string, style: string): void {
     this.snackBar.openFromComponent(SnackbarComponent, {
       data: { message },
       duration: 3000, // 3 seconds
       horizontalPosition: 'start', // Left side of the screen
       verticalPosition: 'top',
-      panelClass: ['snackbar-custom-style'] // Optional custom styling
+      panelClass: style, // Optional custom styling
     });
   }
 }

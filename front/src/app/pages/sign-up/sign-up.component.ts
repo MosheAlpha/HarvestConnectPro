@@ -11,35 +11,43 @@ import { AuthService } from 'src/app/auth.service';
 export class SignUpComponent {
   //name, email, password, role: "user or admin"
 
-  constructor(private authService: AuthService, private router: Router, public snackbarService: SnackbarService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    public snackbarService: SnackbarService
+  ) {}
 
-  showSnackbarOnClick(message: string) {
-    this.snackbarService.showSnackbar(message);
+  showSnackbarOnClick(message: string, style: string) {
+    this.snackbarService.showSnackbar(message, style);
   }
 
   checkPasswords(password: string, password1: string): boolean {
-    return password == password1 
+    return password == password1;
   }
 
-  signup(name: string, email: string, password: string , password1: string): void {
-    let message: string="";
-    if(this.checkPasswords(password, password1)){
+  signup(
+    name: string,
+    email: string,
+    password: string,
+    password1: string
+  ): void {
+    let message: string = '';
+    if (this.checkPasswords(password, password1)) {
       this.authService.signup(name, email, password).subscribe((success) => {
         if (success) {
           // Navigate to the home page
-          this.showSnackbarOnClick("הרישום עבר בהצלחה");
+          this.showSnackbarOnClick('הרישום עבר בהצלחה', 'snackbar-success');
           this.router.navigate(['/home']);
         } else {
           // Display an error message
-          this.showSnackbarOnClick("היתה בעיה באחד הנתונים");
+          this.showSnackbarOnClick('היתה בעיה באחד הנתונים', 'snackbar-error');
           console.error('Signup failed');
         }
       });
+    } else {
+      message = 'הססמאות אינם זהות';
+      this.showSnackbarOnClick(message, 'snackbar-error');
     }
-    else{
-      message = "הססמאות אינם זהות";
-    }
-    this.showSnackbarOnClick(message);
     // Call the signup method of the AuthenticationService
   }
 }

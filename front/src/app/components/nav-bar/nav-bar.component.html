@@ -10,11 +10,21 @@
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul dir="rtl" class="nav">
+            <span *ngIf="!isLogged">
+              <button class="log" routerLink="/login">התחברות</button>
+              <button class="reg" routerLink="/sign-up">הרשמה</button>
+            </span>
+            <span *ngIf="isLogged">
+              <button class="log" (click)="logOut()">יציאה</button>
+            </span>
+
             <li><a routerLink="/home">בית</a></li>
             <li><a routerLink="/volunteering">התנדבויות</a></li>
 
             <li>
-              <a routerLink="/volunteer-details" style="color: black;">ההתנדבות הקרובה</a>
+              <a routerLink="/volunteer-details" style="color: black"
+                >ההתנדבות הקרובה</a
+              >
             </li>
             <li><a routerLink="/management" *ngIf="this.isAdmin()">ניהול</a></li>
             <li><a routerLink="/contact">צור קשר </a></li>

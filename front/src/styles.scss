@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* app.component.scss */
+
+::ng-deep .snackbar-success {
+  background-color: #4caf50; /* Green background color for success */
+  color: #fff; /* White text color for better contrast */
+}
+
+::ng-deep .snackbar-error {
+  background-color: #f44336; /* Red background color for error */
+  color: #fff; /* White text color for better contrast */
+}
