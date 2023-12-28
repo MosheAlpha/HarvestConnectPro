@@ -192,10 +192,15 @@
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <div class="video-frame">
-          <img src="assets/images/video-frame.jpg" alt="" />
-          <a href="https://youtube.com" target="_blank"
-            ><i class="fa fa-play"></i
-          ></a>
+          <iframe
+            width="700"
+            height="500"
+            src="https://www.youtube.com/embed/WsG_yvZNnA8?si=G2KUn9ujjR2TLfGy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -210,31 +215,25 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="counter">
-                <h2
-                  class="timer count-title count-number"
-                  [attr.data-to]="this.soldierAmount"
-                  data-speed="1000"
-                ></h2>
+                <h2 class="timer count-title count-number">
+                  {{ this.soldierAmount }}
+                </h2>
                 <p class="count-text">כמות<br />חיילים שמתנדבים</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="counter">
-                <h2
-                  class="timer count-title count-number"
-                  [attr.data-to]="this.peopleAmount"
-                  data-speed="1000"
-                ></h2>
+                <h2 class="timer count-title count-number">
+                  {{ this.peopleAmount }}
+                </h2>
                 <p class="count-text">כמות<br />האנשים</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="counter">
-                <h2
-                  class="timer count-title count-number"
-                  [attr.data-to]="this.volAmount"
-                  data-speed="1000"
-                ></h2>
+                <h2 class="timer count-title count-number">
+                  {{ this.volAmount }}
+                </h2>
                 <p class="count-text">מקומות התנדבות<br />רק לשנת 2023</p>
               </div>
             </div>
