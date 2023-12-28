@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const { toJSON, paginate } = require('./plugins');
-const { harvestTypes } = require('../config/harvest-type');
-const { difficultyKeys } = require('../config/difficulty');
 
 const eventSchema = mongoose.Schema(
   {
@@ -17,12 +15,10 @@ const eventSchema = mongoose.Schema(
     },
     type: {
       type: String,
-      enum: harvestTypes,
-      default: 'a',
+      default: 'digging',
     },
     difficulty: {
       type: String,
-      enum: difficultyKeys,
       default: 'קל',
     },
     date: {

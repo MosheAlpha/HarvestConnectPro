@@ -4,14 +4,14 @@
             <a routerLink="/volunteer-details"><img src="assets/images/property-01.jpg" alt="" /></a>
             <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty)}">{{event.difficulty}}</span>
             <h6>{{event.type}}</h6>
-            <h4>
+            <h4 dir="rtl">
                 <a routerLink="/volunteer-details">{{event.title}}</a>
             </h4>
-            <ul>
-                <li>Location: <span>{{event.location}}</span></li>
-                <li>Date: <span>{{event.date}}</span></li>
-                <li>People needed: <span>{{event.amountPeopleRequired}}</span></li>
-                <li>Spots left: <span>{{event.amountPeopleLeft}}</span></li>
+            <ul dir="rtl">
+                <li>מיקום : <span>{{event.location}}</span></li>
+                <li>תאריך: <span>{{event.date}}</span></li>
+                <li>אנשים להתנדבות: <span>{{event.amountPeopleRequired}}</span></li>
+                <li>אנשים חסרים: <span>{{event.amountPeopleLeft}}</span></li>
             </ul>
             <div class="main-button">
                 <a routerLink="/volunteer-details">לפרטים</a>

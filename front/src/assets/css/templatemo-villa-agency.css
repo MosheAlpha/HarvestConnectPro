@@ -1396,11 +1396,11 @@ Page Header Style
 */
 
 .page-heading {
-  background-image: url(../photos/pruning1.jpg);
+  background-image: url(../photos/pruning.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 110px 0px;
+  padding: 200px 0px;
   text-align: center;
 }
 
