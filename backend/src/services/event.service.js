@@ -21,6 +21,7 @@ const createEvent = async (eventBody) => {
  * @returns {Promise<QueryResult>}
  */
 const queryEvents = async (filter, options) => {
+  options.limit = 30
   const events = await Event.paginate(filter, options);
   return events;
 };
