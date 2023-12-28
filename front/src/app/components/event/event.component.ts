@@ -9,9 +9,9 @@ export class EventComponent implements OnInit {
 
   @Input() events: any;
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
+
+  
 
   getColor(difficulty: string): string {
     switch (difficulty) {
