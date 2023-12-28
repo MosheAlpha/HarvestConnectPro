@@ -2,13 +2,22 @@
   <div class="container" id="container">
     <div class="form-container sign-in-container">
       <form action="#">
-        <h1>Sign Up</h1>
+        <h1>הרשמה</h1>
         <input dir="rtl" type="text" placeholder="שם מלא" #name />
-        <input dir="rtl" type="email" placeholder="מייל או שם משתמש" #username />
-        <input dir="rtl" type="password" placeholder="סיסמה" #password />
-        <input dir="rtl" type="password" placeholder="סיסמה" #password1 />
-        <button (click)="signup(name.value, username.value, password.value, password1.value)">
-          Sign Up
+        <input
+          dir="rtl"
+          type="email"
+          placeholder="מייל או שם משתמש"
+          #username
+        />
+        <input dir="rtl" type="password" placeholder="סיסמא" #password />
+        <input dir="rtl" type="password" placeholder="סיסמא" #password1 />
+        <button
+          (click)="
+            signup(name.value, username.value, password.value, password1.value)
+          "
+        >
+          הרשמה
         </button>
       </form>
     </div>

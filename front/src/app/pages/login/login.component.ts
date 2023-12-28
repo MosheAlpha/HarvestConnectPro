@@ -9,24 +9,28 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(private authService: AuthService, private router: Router, public snackbarService: SnackbarService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    public snackbarService: SnackbarService
+  ) {}
 
-  showSnackbarOnClick(message: string) {
-    this.snackbarService.showSnackbar(message);
+  showSnackbarOnClick(message: string, style: string) {
+    this.snackbarService.showSnackbar(message, style);
   }
 
   login(username: any, password: any): void {
-    let message: string = "";
+    let message: string = '';
     this.authService.login(username, password).subscribe((success) => {
       if (success) {
         // Navigate to the home page
-        this.showSnackbarOnClick( "התחברת בהצלחה");
+        this.showSnackbarOnClick('התחברת בהצלחה', 'snackbar-success');
         this.router.navigate(['/home']);
       } else {
         // Display an error message
-        this.showSnackbarOnClick("יש בעיה בהתחברות");
+        this.showSnackbarOnClick('יש בעיה בהתחברות', 'snackbar-error');
       }
     });
-    this.showSnackbarOnClick(message);
+    // this.showSnackbarOnClick(message);
   }
 }
