@@ -14,9 +14,9 @@ export class BestdealEventComponent implements OnChanges {
 
   ngOnChanges(changes: any) {
     if (changes && changes.events && changes.events.currentValue.length > 0 && changes.events.currentValue !== changes.events.previousValue) {
-      this.easy = this.events[0];
-      this.medium = this.events[1];
-      this.hard = this.events[2];
+      this.easy = this.events[3];
+      this.medium = this.events[5];
+      this.hard = this.events[0];
     }
   }
 

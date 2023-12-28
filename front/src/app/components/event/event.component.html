@@ -1,7 +1,7 @@
 <div class="events-container">
     <div class="event-card" *ngFor="let event of events">
         <div class="item">
-            <a routerLink="/volunteer-details"><img src="assets/images/property-01.jpg" alt="" /></a>
+            <a routerLink="/volunteer-details"><img class="card-img" src="assets/photos/{{event.type}}.jpg" alt="" /></a>
             <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty)}">{{event.difficulty}}</span>
             <h6>{{event.type}}</h6>
             <h4 dir="rtl">

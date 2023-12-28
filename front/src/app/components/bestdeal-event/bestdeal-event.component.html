@@ -3,8 +3,8 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="section-heading">
-            <h6>| Best Deal</h6>
-            <h2>Find Your Best Deal Right Now!</h2>
+            <h6 dir="rtl">המקום הקרוב ביותר אליך!</h6>
+            <h2 dir="rtl">מצא את המקום הטוב ביותר עבורך להתנדב כרגע!</h2>
           </div>
         </div>
         <div class="col-lg-12">
@@ -23,7 +23,7 @@
                       aria-controls="easy"
                       aria-selected="true"
                     >
-                      Easy
+                      קל
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
@@ -37,7 +37,7 @@
                       aria-controls="medium"
                       aria-selected="false"
                     >
-                      Medium
+                      בינוני
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
@@ -51,7 +51,7 @@
                       aria-controls="hard"
                       aria-selected="false"
                     >
-                      Hard
+                      קשה
                     </button>
                   </li>
                 </ul>
@@ -76,7 +76,7 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-01.jpg" alt="" />
+                      <img src="assets/photos/{{this.easy.type}}.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
                       <h4>{{this.easy.title}}</h4>
@@ -116,7 +116,7 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-02.jpg" alt="" />
+                      <img src="assets/photos/{{this.medium.type}}.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
                       <h4>{{this.medium.title}}</h4>
@@ -157,7 +157,7 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img src="assets/images/deal-03.jpg" alt="" />
+                      <img src="assets/photos/{{this.hard.type}}.jpg" alt="" />
                     </div>
                     <div class="col-lg-3">
                       <h4>{{this.hard.title}}</h4>
