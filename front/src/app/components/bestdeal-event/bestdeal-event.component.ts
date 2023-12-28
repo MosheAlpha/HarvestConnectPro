@@ -13,15 +13,15 @@ export class BestdealEventComponent implements OnChanges {
 
   volunteerHarvestLevels = {
     easy: {
-      title: "רמת קטיף קלה",
+      title: 'רמת קטיף קלה',
       description: 'הצטרף לגן קהילתי לביצור משימות קטנות בקטיף.',
     },
     medium: {
-      title: "רמת קטיף בינונית",
+      title: 'רמת קטיף בינונית',
       description: 'השתתף בעזרת משימות קטיף בחווה קטנה עם אחריות בינונית.',
     },
     hard: {
-      title: "רמת קטיף קשה",
+      title: 'רמת קטיף קשה',
       description: 'השתלבות בקטיף אינטנסיבי בפרויקט חקלאי גדול יותר.',
     },
   };
@@ -38,8 +38,4 @@ export class BestdealEventComponent implements OnChanges {
       this.hard = this.events[0];
     }
   }
-
-  // getTitle(): string{
-
-  // }
 }

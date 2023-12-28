@@ -2,7 +2,7 @@
     <div class="event-card" *ngFor="let event of events">
         <div class="item">
             <a routerLink="/volunteer-details"><img class="card-img" src="assets/photos/{{event.type}}.jpg" alt="" /></a>
-            <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty)}">{{event.difficulty}}</span>
+            <span class="category" [ngStyle]="{'background-color': getColor(event.difficulty | translate)}">{{event.difficulty |translate}}</span>
             <h6>{{event.type | translate}}</h6>
             <h4 dir="rtl">
                 <a routerLink="/volunteer-details">{{event.title}}</a>
@@ -10,11 +10,11 @@
             <ul dir="rtl">
                 <li>מיקום : <span>{{event.location}}</span></li>
                 <li>תאריך: <span>{{event.date}}</span></li>
-                <li>אנשים להתנדבות: <span>{{event.amountPeopleRequired}}</span></li>
-                <li>אנשים חסרים: <span>{{event.amountPeopleLeft}}</span></li>
+                <li>כמות אנשים: <span>{{event.amountPeopleRequired}}</span></li>
+                <li>חוסר: <span>{{event.amountPeopleLeft}}</span></li>
             </ul>
             <div class="main-button">
-                <a routerLink="/volunteer-details">לפרטים</a>
+                <a routerLink="/volunteer-details/{{event.id}}">לפרטים</a>
             </div>
         </div>
     </div>

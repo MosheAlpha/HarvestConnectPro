@@ -25,6 +25,11 @@ export class EventService {
     return this.http.get<any>(`${this.apiUrl}`, { headers });
   }
 
+  getEvent(id: any): Observable<any> {
+    const headers = this.getHeaders();
+    return this.http.get<any>(`${this.apiUrl}/${id}`, { headers });
+  }
+
   // DELETE request
   deleteEvent(id: number): Observable<any> {
     const headers = this.getHeaders();
