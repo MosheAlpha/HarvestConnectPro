@@ -20,11 +20,11 @@ export class LoginComponent {
     this.authService.login(username, password).subscribe((success) => {
       if (success) {
         // Navigate to the home page
-        message = "התחברת בהצלחה";
+        this.showSnackbarOnClick( "התחברת בהצלחה");
         this.router.navigate(['/home']);
       } else {
         // Display an error message
-        message = "יש בעיה בהתחברות";
+        this.showSnackbarOnClick("יש בעיה בהתחברות");
       }
     });
     this.showSnackbarOnClick(message);

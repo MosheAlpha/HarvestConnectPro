@@ -1,11 +1,17 @@
-body{
-    text-align: right;
+body {
+  text-align: right;
 }
 
-.rtl-right{
-    direction: rtl;
+.rtl-right {
+  direction: rtl;
 }
 
-.lable-right{
-    text-align: right;
+.lable-right {
+  text-align: right;
+}
+
+.video-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
