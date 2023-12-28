@@ -4,6 +4,7 @@ const eventController = require('../../controllers/event.controller');
 
 const router = express.Router();
 
+router.get('/closest', eventController.getClosest);
 router
   .route('/')
   .post(auth('manageUsers'), eventController.createEvent)

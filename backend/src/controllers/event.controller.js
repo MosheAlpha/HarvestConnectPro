@@ -34,10 +34,16 @@ const deleteEvent = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+const getClosest = catchAsync(async (req, res) => {
+  const closestEvent = await eventService.getClosestEvent();
+  res.status(200).json({ closestEvent });
+});
+
 module.exports = {
   createEvent,
   getEvents,
   getEvent,
   updateEvent,
   deleteEvent,
+  getClosest
 };

@@ -64,10 +64,19 @@ const deleteEventById = async (eventId) => {
   return event;
 };
 
+const getClosestEvent = async () => {
+  const currentDate = new Date(); // Get the current date
+  const closestEvent = await Event.findOne({
+    date: { $lte: currentDate }
+  }).sort({ date: -1 }).limit(1);
+  return closestEvent;
+}
+
 module.exports = {
   createEvent,
   queryEvents,
   getEventById,
   updateEventById,
   deleteEventById,
+  getClosestEvent
 };
