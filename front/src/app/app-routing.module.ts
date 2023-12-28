@@ -6,12 +6,31 @@ import { VolunteerDetailsComponent } from './pages/volunteer-details/volunteer-d
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { AuthGuard } from './auth.guard';
+import { NewEventComponent } from './pages/new-event/new-event.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: WelcomePageComponent },
-  { path: 'volunteering', component: VolunteeringComponent },
-  { path: 'volunteer-details', component: VolunteerDetailsComponent },
+  {
+    path: 'volunteering',
+    component: VolunteeringComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'volunteer-details/:id',
+    component: VolunteerDetailsComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'new-event',
+    component: NewEventComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'volunteer-details',
+    redirectTo: '/home',
+  },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -19,6 +38,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
