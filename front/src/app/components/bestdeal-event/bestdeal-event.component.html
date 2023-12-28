@@ -1,180 +1,200 @@
 <div class="section best-deal" id="closes-event">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="section-heading">
-            <h6 dir="rtl">המקום הקרוב ביותר אליך!</h6>
-            <h2 dir="rtl">מצא את המקום הטוב ביותר עבורך להתנדב כרגע!</h2>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="section-heading">
+          <h6 dir="rtl">המקום הקרוב ביותר אליך!</h6>
+          <h2 dir="rtl">מצא את המקום הטוב ביותר עבורך להתנדב כרגע!</h2>
         </div>
-        <div class="col-lg-12">
-          <div class="tabs-content">
-            <div class="row">
-              <div class="nav-wrapper">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link active"
-                      id="easy-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#easy"
-                      type="button"
-                      role="tab"
-                      aria-controls="easy"
-                      aria-selected="true"
-                    >
-                      קל
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link"
-                      id="medium-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#medium"
-                      type="button"
-                      role="tab"
-                      aria-controls="medium"
-                      aria-selected="false"
-                    >
-                      בינוני
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link"
-                      id="hard-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#hard"
-                      type="button"
-                      role="tab"
-                      aria-controls="hard"
-                      aria-selected="false"
-                    >
-                      קשה
-                    </button>
-                  </li>
-                </ul>
+      </div>
+      <div class="col-lg-12">
+        <div class="tabs-content">
+          <div class="row">
+            <div class="nav-wrapper">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="easy-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#easy"
+                    type="button"
+                    role="tab"
+                    aria-controls="easy"
+                    aria-selected="true"
+                  >
+                    קל
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="medium-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#medium"
+                    type="button"
+                    role="tab"
+                    aria-controls="medium"
+                    aria-selected="false"
+                  >
+                    בינוני
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="hard-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#hard"
+                    type="button"
+                    role="tab"
+                    aria-controls="hard"
+                    aria-selected="false"
+                  >
+                    קשה
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="easy"
+                role="tabpanel"
+                aria-labelledby="easy-tab"
+              >
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="info-table">
+                      <ul>
+                        <li>
+                          מיקום <span>{{ this.easy.location }}</span>
+                        </li>
+                        <li>
+                          תאריך <span>{{ this.easy.date }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת סה"כ
+                          <span>{{ this.easy.amountPeopleRequired }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת
+                          <span>{{ this.easy.amountPeopleLeft }}</span>
+                        </li>
+                        <li>
+                          סוג התנדבות <span>{{ this.easy.type }}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <img src="assets/photos/{{ this.easy.type }}.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-3">
+                    <h4>{{ this.volunteerHarvestLevels.easy.title }}</h4>
+                    <p>
+                      {{ this.volunteerHarvestLevels.easy.description }}
+                    </p>
+                    <div class="icon-button">
+                      <a routerLink="/volunteering"
+                        ><i class="fa fa-calendar"></i>לפרטים</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="tab-content" id="myTabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="easy"
-                  role="tabpanel"
-                  aria-labelledby="easy-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Location <span>{{this.easy.location}}</span></li>
-                          <li>Date <span>{{this.easy.date}}</span></li>
-                          <li>People needed <span>{{this.easy.amountPeopleRequired}}</span></li>
-                          <li>Spots left <span>{{this.easy.amountPeopleLeft}}</span></li>
-                          <li>Type <span>{{this.easy.type}}</span></li>
-                        </ul>
-                      </div>
+              <div
+                class="tab-pane fade"
+                id="medium"
+                role="tabpanel"
+                aria-labelledby="medium-tab"
+              >
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="info-table">
+                      <ul>
+                        <li>
+                          מיקום <span>{{ this.medium.location }}</span>
+                        </li>
+                        <li>
+                          תאריך <span>{{ this.medium.date }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת סה"כ
+                          <span>{{ this.medium.amountPeopleRequired }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת
+                          <span>{{ this.medium.amountPeopleLeft }}</span>
+                        </li>
+                        <li>
+                          סוג התנדבות <span>{{ this.medium.type }}</span>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="col-lg-6">
-                      <img src="assets/photos/{{this.easy.type}}.jpg" alt="" />
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>{{this.easy.title}}</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        do eiusmod tempor pack incididunt ut labore et dolore
-                        magna aliqua quised ipsum suspendisse.
-                        <br /><br />When you need free CSS templates, you can
-                        simply type TemplateMo in any search engine website. In
-                        addition, you can type TemplateMo Portfolio, TemplateMo
-                        One Page Layouts, etc.
-                      </p>
-                      <div class="icon-button">
-                        <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i>לפרטים</a
-                        >
-                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <img
+                      src="assets/photos/{{ this.medium.type }}.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-3">
+                    <h4>{{ this.volunteerHarvestLevels.medium.title }}</h4>
+                    <p>
+                      {{ this.volunteerHarvestLevels.medium.description }}
+                    </p>
+                    <div class="icon-button">
+                      <a routerLink="/volunteering"
+                        ><i class="fa fa-calendar"></i> לפרטים</a
+                      >
                     </div>
                   </div>
                 </div>
-                <div
-                  class="tab-pane fade"
-                  id="medium"
-                  role="tabpanel"
-                  aria-labelledby="medium-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Location <span>{{this.medium.location}}</span></li>
-                          <li>Date <span>{{this.medium.date}}</span></li>
-                          <li>People needed <span>{{this.medium.amountPeopleRequired}}</span></li>
-                          <li>Spots left <span>{{this.medium.amountPeopleLeft}}</span></li>
-                          <li>Type <span>{{this.medium.type}}</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="assets/photos/{{this.medium.type}}.jpg" alt="" />
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>{{this.medium.title}}</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        do eiusmod tempor pack incididunt ut labore et dolore
-                        magna aliqua quised ipsum suspendisse.
-                        <br /><br />Swag fanny pack lyft blog twee. JOMO ethical
-                        copper mug, succulents typewriter shaman DIY kitsch twee
-                        taiyaki fixie hella venmo after messenger poutine next
-                        level humblebrag swag franzen.
-                      </p>
-                      <div class="icon-button">
-                        <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i> לפרטים</a
-                        >
-                      </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="hard"
+                role="tabpanel"
+                aria-labelledby="hard-tab"
+              >
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="info-table">
+                      <ul>
+                        <li>
+                          מיקום <span>{{ this.hard.location }}</span>
+                        </li>
+                        <li>
+                          תאריך <span>{{ this.hard.date }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת סה"כ
+                          <span>{{ this.hard.amountPeopleRequired }}</span>
+                        </li>
+                        <li>
+                          כמות אנשים שנצרכת
+                          <span>{{ this.hard.amountPeopleLeft }}</span>
+                        </li>
+                        <li>
+                          סוג התנדבות <span>{{ this.hard.type }}</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-                
-                <div
-                  class="tab-pane fade"
-                  id="hard"
-                  role="tabpanel"
-                  aria-labelledby="hard-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Location <span>{{this.hard.location}}</span></li>
-                          <li>Date <span>{{this.hard.date}}</span></li>
-                          <li>People needed <span>{{this.hard.amountPeopleRequired}}</span></li>
-                          <li>Spots left <span>{{this.hard.amountPeopleLeft}}</span></li>
-                          <li>Type <span>{{this.hard.type}}</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="assets/photos/{{this.hard.type}}.jpg" alt="" />
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>{{this.hard.title}}</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        do eiusmod tempor pack incididunt ut labore et dolore
-                        magna aliqua quised ipsum suspendisse.
-                        <br /><br />Swag fanny pack lyft blog twee. JOMO ethical
-                        copper mug, succulents typewriter shaman DIY kitsch twee
-                        taiyaki fixie hella venmo after messenger poutine next
-                        level humblebrag swag franzen.
-                      </p>
-                      <div class="icon-button">
-                        <a routerLink="/volunteer-details"
-                          ><i class="fa fa-calendar"></i> לפרטים</a
-                        >
-                      </div>
+                  <div class="col-lg-6">
+                    <img src="assets/photos/{{ this.hard.type }}.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-3">
+                    <h4>{{ this.volunteerHarvestLevels.hard.title }}</h4>
+                    <p>
+                      {{ this.volunteerHarvestLevels.hard.description }}
+                    </p>
+                    <div class="icon-button">
+                      <a routerLink="/volunteering"
+                        ><i class="fa fa-calendar"></i> לפרטים</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -185,3 +205,4 @@
       </div>
     </div>
   </div>
+</div>
