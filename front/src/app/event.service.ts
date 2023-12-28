@@ -13,6 +13,7 @@ export class EventService {
   constructor(private http: HttpClient) {}
 
   private getHeaders(): HttpHeaders {
+    this.authToken = localStorage.getItem('accessToken');
     return new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.authToken}` // Set Bearer token in the Authorization header

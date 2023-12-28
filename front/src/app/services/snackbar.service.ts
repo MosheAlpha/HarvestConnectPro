@@ -11,7 +11,7 @@ export class SnackbarService {
   showSnackbar(message: string, style: string): void {
     this.snackBar.openFromComponent(SnackbarComponent, {
       data: { message },
-      duration: 30000, // 3 seconds
+      duration: 3000, // 3 seconds
       horizontalPosition: 'start', // Left side of the screen
       verticalPosition: 'top',
       panelClass: style, // Optional custom styling
