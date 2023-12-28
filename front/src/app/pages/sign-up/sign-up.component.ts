@@ -27,11 +27,11 @@ export class SignUpComponent {
       this.authService.signup(name, email, password).subscribe((success) => {
         if (success) {
           // Navigate to the home page
-          message = "הרישום עבר בהצלחה";
+          this.showSnackbarOnClick("הרישום עבר בהצלחה");
           this.router.navigate(['/home']);
         } else {
           // Display an error message
-          message = "היתה בעיה באחד הנתונים";
+          this.showSnackbarOnClick("היתה בעיה באחד הנתונים");
           console.error('Signup failed');
         }
       });
